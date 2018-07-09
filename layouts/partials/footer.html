@@ -1,0 +1,30 @@
+<footer id="footer">
+    <div class="container">
+        &copy; 2018 <a rel="nofollow" href="{{ .Site.BaseURL | absURL }}">{{ .Site.Title }}</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io">Hugo</a>.
+        <a rel="nofollow noreferer noopener" href="https://github.com/JokerQyou/maupassant-hugo">Theme</a> based on <a rel="nofollow noreferer noopener" href="https://github.com/pagecho/maupassant">maupassant</a>.
+    </div>
+</footer>
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script>
+<script type="text/javascript" src="{{ "js/calendar.js" | relURL}}" ></script>
+<script type="text/javascript" src="{{ "js/point.js" | relURL}}" ></script>
+{{ if .IsPage }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-go.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-php.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/plugins/toolbar/prism-toolbar.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script type="text/javascript">
+  $('pre').addClass("line-numbers").css("white-space", "pre-wrap");
+</script>
+{{ end }}
+<script>
+$("img.lazy").lazyload({
+    effect : "fadeIn"
+});
+</script>

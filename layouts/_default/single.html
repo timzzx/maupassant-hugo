@@ -1,0 +1,98 @@
+{{ partial "head" . }}
+<body>
+{{ partial "header" . }}
+
+<div id="body">
+    <div class="container">
+        <div class="col-group">
+
+            <div class="col-8" id="main">
+            
+                <div class="res-cons">
+                    <article class="post">
+                        <header>
+                            <h1 class="post-title">{{ .Title }}</h1>
+                        </header>
+                        <date class="post-meta meta-date">
+                            {{ .Date.Year }}年{{ printf "%d" .Date.Month }}月{{ .Date.Day }}日
+                            {{ printf "%02d" .Date.Hour }}:{{ printf "%02d" .Date.Minute }} | 
+                            字数{{.WordCount}}个 | 
+                            阅读时间{{.ReadingTime}}分钟
+                        </date>
+                        {{ with .Params.Categories }}
+                        <div class="post-meta meta-category">
+                            | 归类于
+                            {{ range . }}
+                                <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                            {{ end }}
+                        </div>
+                        {{ end }}
+                        <br />
+                        <div class="post-meta meta-tags">
+                            {{ if and (isset .Params "tags") .Params.tags }}
+                            <ul class="clearfix">
+                                {{ range .Params.Tags }}
+                                <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+                                {{ end }}
+                            </ul>
+                            {{ else }}
+                            没有标签
+                            {{ end }}
+                        </div>
+                    </article>
+                    {{ partial "comments" . }}
+                </div>
+
+                <aside>
+                    <div class="meta-category tablelist">
+                    {{ .TableOfContents }}
+                    </div>
+                </aside>
+
+                        <div class="post-content">
+                            <article>
+                            {{ .Content }}
+                            </article>
+                        </div>
+                {{ if (.Params.gitment) }}
+                <div id="git-comments"></div>
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+                <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+                <script>
+                
+                function GetUrlRelativePath()
+            　　{
+            　　　　var url = document.location.toString();
+            　　　　var arrUrl = url.split("//");
+
+            　　　　var start = arrUrl[1].indexOf("/");
+            　　　　var relUrl = arrUrl[1].substring(start);//stop省略，截取从start开始到结尾的所有字符
+
+            　　　　if(relUrl.indexOf("?") != -1){
+            　　　　　　relUrl = relUrl.split("?")[0];
+            　　　　}
+            　　　　return relUrl;
+            　　}
+                  
+                  var gitalk = new Gitalk({
+                  clientID: '5b5fde7475577bcb14fc',
+                  clientSecret: '5a75bf2c7de61ecfb836987ddb5889433044a464',
+                  owner: 'timzzx',
+                  repo: 'timx.cn',
+                  admin: ['timzzx'],
+                    id: GetUrlRelativePath(),  // 可选, 默认为 location.href
+                  distractionFreeMode: false  // Facebook-like distraction free mode
+                })
+
+                gitalk.render('git-comments')
+                </script>
+                {{ end }}
+                        
+            </div>
+            {{ partial "sidebar" . }}
+        </div>
+    </div>
+</div>
+{{ partial "footer" . }}
+</body>
+</html>

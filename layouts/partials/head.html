@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}zh-CN{{end}}">
+<head>
+
+    <meta charset="utf-8">
+    {{ .Hugo.Generator }}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <link rel="shortcut icon" href="{{ "img/favicon.ico" | relURL}}" >
+    {{ if .IsHome -}}
+    <title>{{ .Site.Title }}</title>
+    <meta property="og:title" content="{{ .Site.Title }}">
+    <meta property="og:type" content="website">
+    <meta name="description" content="{{ .Site.Params.description }}">
+    {{- else -}}
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+    <meta property="og:type" content="article">
+        {{ with .Params.date }}
+    <meta property="article:published_time" content="{{ .Format "2006-01-02T15:04:05+08:00" }}">
+        {{ end }}
+        {{ with .Params.lastmod }}
+    <meta property="article:modified_time" content="{{ .Format "2006-01-02T15:04:05+08:00" }}">
+        {{ end }}
+    <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Title }}{{ end }}">
+        {{ if .Params.author -}}
+    <meta name="author" content="{{ .Params.author }}">
+        {{ else }}
+    <meta name="author" content="{{ .Site.Author.name }}">
+        {{- end }}
+    {{- end }}
+    <meta property="og:url" content="{{ .Permalink }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
+    {{ if .IsPage }}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/themes/prism-okaidia.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/plugins/line-numbers/prism-line-numbers.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/plugins/toolbar/prism-toolbar.min.css" />
+    {{ end }}
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/dmaku.css" | relURL }}">
+</head>
