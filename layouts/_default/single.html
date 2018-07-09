@@ -16,7 +16,6 @@
                         <date class="post-meta meta-date">
                             {{ .Date.Year }}年{{ printf "%d" .Date.Month }}月{{ .Date.Day }}日
                             {{ printf "%02d" .Date.Hour }}:{{ printf "%02d" .Date.Minute }} | 
-                            字数{{.WordCount}}个 | 
                             阅读时间{{.ReadingTime}}分钟
                         </date>
                         {{ with .Params.Categories }}
@@ -75,11 +74,11 @@
             　　}
                   
                   var gitalk = new Gitalk({
-                  clientID: '5b5fde7475577bcb14fc',
-                  clientSecret: '5a75bf2c7de61ecfb836987ddb5889433044a464',
-                  owner: 'timzzx',
-                  repo: 'timx.cn',
-                  admin: ['timzzx'],
+                  clientID: '',
+                  clientSecret: '',
+                  owner: '',
+                  repo: '',
+                  admin: [''],
                     id: GetUrlRelativePath(),  // 可选, 默认为 location.href
                   distractionFreeMode: false  // Facebook-like distraction free mode
                 })
