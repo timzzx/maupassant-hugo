@@ -11,6 +11,7 @@ Maupassant theme, ported to Hugo.
 ![card](https://user-images.githubusercontent.com/8891076/42434624-75d5b1b4-8386-11e8-89ab-99ea0f8ff111.jpg)
 #### 4.原模板中手机端显示右侧栏会被隐藏，修改后在手机端让右侧栏显示在文章的下方。
 ![card](https://user-images.githubusercontent.com/8891076/42434972-a90ba010-8387-11e8-8c0f-6d0db19f5f58.jpg)
+#### 5.添加了背景动画
 
 
 ### 注意事项
