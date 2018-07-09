@@ -1,6 +1,6 @@
 # maupassant-hugo
 Maupassant theme, ported to Hugo.
-这个模板基于https://github.com/JokerQyou/maupassant-hugo的修改而来
+这个模板基于https://github.com/JokerQyou/maupassant-hugo
 ## 1.添加了右侧卡片式的个人介绍
 ## 2.添加了右侧日历显示
 ## 3.添加了gittalk评论（之前加了gitment，后来发现gittalk更优秀就替换成gittalk）
