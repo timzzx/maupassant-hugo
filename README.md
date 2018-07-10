@@ -13,6 +13,11 @@ Maupassant theme, ported to Hugo.
 ![card](https://user-images.githubusercontent.com/8891076/42434972-a90ba010-8387-11e8-8c0f-6d0db19f5f58.jpg)
 #### 5.添加了背景动画
 
+#### 6.修改了hugo的TableOfContents的样式
+
+由于hugo的文章目录是根据标题的#自动设置ul li的层次。所以如果标题用的#号过多显示会比较难看。
+
+![card](https://user-images.githubusercontent.com/8891076/42494074-bf10ef3a-8451-11e8-8a95-0c30bc49bd24.jpg)
 
 ### 注意事项
 
