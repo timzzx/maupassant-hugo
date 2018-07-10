@@ -36,7 +36,6 @@
                             </date>
                             {{ with .Params.Categories }}
                             <div class="post-meta meta-category">
-                                ，归类于
                                 {{ range . }}
                                     <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
                                 {{ end }}
@@ -44,9 +43,12 @@
                             {{ end }}
                             <div class="post-content">
                                 {{ .Content | markdownify | truncate 200 }}
-                                <a href="{{ .Permalink }}">阅读全文</a>
+                                <br />
+                                <a href="{{ .Permalink }}">阅读全文>></a>
                             </div>
                         </article>
+                        <br />
+                        <hr />
                     {{ end }}
 
                     {{ partial "paginator" . }}

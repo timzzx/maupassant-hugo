@@ -31,9 +31,12 @@
                             {{ end }}
                             <div class="post-content">
                                 {{ .Content | safeHTML | truncate 200 }}
-                                <a href="{{ .Permalink }}">阅读全文</a>
+                                <br />
+                                <a href="{{ .Permalink }}">阅读全文>></a>
                             </div>
                         </article>
+                        <br />
+                        <hr />
                     {{ end }}
 
                     {{ partial "paginator" . }}

@@ -19,6 +19,9 @@ Maupassant theme, ported to Hugo.
 
 ![card](https://user-images.githubusercontent.com/8891076/42494074-bf10ef3a-8451-11e8-8a95-0c30bc49bd24.jpg)
 
+#### 6.修改了表格展示的样式
+![table](https://user-images.githubusercontent.com/8891076/42500637-67c93f12-8464-11e8-9bab-f7a92083cb31.jpg)
+
 ### 注意事项
 
 1.要增加菜单在md文件中加入type: standalone

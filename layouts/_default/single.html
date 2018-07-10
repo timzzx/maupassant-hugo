@@ -20,7 +20,6 @@
                         </date>
                         {{ with .Params.Categories }}
                         <div class="post-meta meta-category">
-                            | 归类于
                             {{ range . }}
                                 <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
                             {{ end }}
@@ -41,13 +40,13 @@
                     </article>
                     {{ partial "comments" . }}
                 </div>
-
+                {{ if (.Params.TableOfContents) }}
                 <aside>
                     <div class="tablelist">
                     {{ .TableOfContents }}
                     </div>
                 </aside>
-
+                 {{ end }}
                         <div class="post-content">
                             <article>
                             {{ .Content }}
