@@ -14,12 +14,14 @@
                             <h1 class="post-title">{{ .Title }}</h1>
                         </header>
                         <date class="post-meta meta-date">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
                             {{ .Date.Year }}年{{ printf "%d" .Date.Month }}月{{ .Date.Day }}日
                             {{ printf "%02d" .Date.Hour }}:{{ printf "%02d" .Date.Minute }} | 
                             阅读时间{{.ReadingTime}}分钟
                         </date>
                         {{ with .Params.Categories }}
-                        <div class="post-meta meta-category">
+                        <div class="post-meta">
+                         | <i class="fa fa-folder-o" aria-hidden="true"></i>
                             {{ range . }}
                                 <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
                             {{ end }}
