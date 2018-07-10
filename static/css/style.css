@@ -149,25 +149,19 @@ textarea {
 .clearfix:after, .col-group:after {
     clear:both;
 }
-.comment-content a {
+.post-content a, .comment-content a {
     font-size: 14px;
     color: #444;
     margin: -10px 0;
     padding: 5px 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    float: right;
 }
 .post-meta a:hover, .post-content a:hover, .widget a:hover, .comment-content a {
     background-color:transparent;
 }
 .post-content a {
-    font-size: 14px;
-    color: #444;
-    margin: -10px 0;
-    padding: 5px 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    
 }
 #header {
     padding:58px 0 0;
