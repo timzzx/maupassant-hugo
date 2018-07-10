@@ -43,3 +43,12 @@ gitment: true
 TableOfContents: true
 ---
 ```
+4.配置gitment在config.toml加入以下配置
+```
+[params]
+    clientID=''
+    clientSecret=''
+    owner=''
+    repo=''
+    admin=''
+```
