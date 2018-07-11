@@ -22,6 +22,10 @@
                                 {{ .Date.Year }}年{{ printf "%d" .Date.Month }}月{{ .Date.Day }}日
                                 {{ printf "%02d" .Date.Hour }}:{{ printf "%02d" .Date.Minute }}
                             </date>
+                            <div class="post-meta">
+                                | <i class="fa fa-user-o" aria-hidden="true"></i>
+                                <a href="/about">{{ .Site.Author.name }}</a>
+                            </div>
                             {{ with .Params.Categories }}
                             <div class="post-meta">
                                 | <i class="fa fa-folder-o" aria-hidden="true"></i>

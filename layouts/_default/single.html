@@ -19,6 +19,10 @@
                             {{ printf "%02d" .Date.Hour }}:{{ printf "%02d" .Date.Minute }} | 
                             阅读时间{{.ReadingTime}}分钟
                         </date>
+                        <div class="post-meta">
+                            | <i class="fa fa-user-o" aria-hidden="true"></i>
+                            <a href="/about">{{ .Site.Author.name }}</a>
+                        </div>
                         {{ with .Params.Categories }}
                         <div class="post-meta">
                          | <i class="fa fa-folder-o" aria-hidden="true"></i>
