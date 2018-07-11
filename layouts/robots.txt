@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Allow: /post/
+Allow: /tags/
+Allow: /categories/
+
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+
+Sitemap: https://timx.cn/sitemap.xml
