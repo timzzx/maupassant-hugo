@@ -56,6 +56,12 @@
                         <div class="post-content">
                             <article>
                             {{ .Content }}
+                            {{if (.Next)}}
+                            <a href="{{ .Next.Permalink }}">{{ .Next.LinkTitle }}</a>
+                            {{ end }}
+                            {{if (.Prev)}}
+                            <a href="{{ .Prev.Permalink }}">{{ .Prev.LinkTitle }}</a>
+                            {{ end }}
                             </article>
                         </div>
                 {{ if (.Params.gitment) }}
