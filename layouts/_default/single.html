@@ -57,10 +57,10 @@
                             <article>
                             {{ .Content }}
                             {{if (.Next)}}
-                            <a href="{{ .Next.Permalink }}">{{ .Next.LinkTitle }}</a>
+                            <a href="{{ .Next.Permalink }}">上一页</a>&nbsp;{{ .Next.LinkTitle }}<br /><br />
                             {{ end }}
                             {{if (.Prev)}}
-                            <a href="{{ .Prev.Permalink }}">{{ .Prev.LinkTitle }}</a>
+                            <a href="{{ .Prev.Permalink }}">下一页</a>&nbsp;{{ .Prev.LinkTitle }}
                             {{ end }}
                             </article>
                         </div>
