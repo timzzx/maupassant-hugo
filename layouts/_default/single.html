@@ -32,17 +32,6 @@
                         </div>
                         {{ end }}
                         <br />
-                        <div class="post-meta meta-tags">
-                            {{ if and (isset .Params "tags") .Params.tags }}
-                            <ul class="clearfix">
-                                {{ range .Params.Tags }}
-                                <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
-                                {{ end }}
-                            </ul>
-                            {{ else }}
-                            没有标签
-                            {{ end }}
-                        </div>
                     </article>
                     {{ partial "comments" . }}
                 </div>

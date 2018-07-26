@@ -36,12 +36,21 @@
         <ul class="widget-list">
             {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
             <li>
-                <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a>
+                <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }} ({{len $taxonomy.Pages}})</a>
             </li>
             {{ end }}
         </ul>
     </section>
-
+    <section class="widget">
+        <h3 class="widget-title">归档</h3>
+        <ul class="widget-list">
+            {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+            <li>
+                <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">{{ $name }} ({{len $taxonomy.Pages}})</a>
+            </li>
+            {{ end }}
+        </ul>
+    </section>
     {{ with .Site.Params.links }}
     <section class="widget">
         <h3 class="widget-title">友情链接</h3>
