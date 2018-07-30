@@ -35,9 +35,9 @@
         <h3 class="widget-title">分类</h3>
         <ul class="widget-list">
             {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-            <li>
+            <li class="fa fa-angle-double-right">
                 <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }} ({{len $taxonomy.Pages}})</a>
-            </li>
+            </li><br />
             {{ end }}
         </ul>
     </section>
@@ -45,9 +45,9 @@
         <h3 class="widget-title">归档</h3>
         <ul class="widget-list">
             {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-            <li>
+            <li class="fa fa-angle-double-right">
                 <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">{{ $name }} ({{len $taxonomy.Pages}})</a>
-            </li>
+            </li><br />
             {{ end }}
         </ul>
     </section>
@@ -56,9 +56,9 @@
         <h3 class="widget-title">友情链接</h3>
         <ul class="widget-list">
             {{ range . }}
-            <li>
+            <li class="fa fa-angle-double-right">
                 <a rel="noreferrer noopener nofollow" href="{{ .url }}" title="{{ .title }}">{{ .name }}</a>
-            </li>
+            </li><br />
             {{ end }}
         </ul>
     </section>
@@ -67,7 +67,7 @@
     <section class="widget">
         <h3 class="widget-title">其它</h3>
         <ul class="widget-list">
-            <li><a href="{{ "index.xml" | relURL }}">本站RSS</a></li>
-        </ul>
+            <li class="fa fa-angle-double-right"><a href="{{ "index.xml" | relURL }}">本站RSS</a></li>
+        </ul><br />
     </section>
 </div>
