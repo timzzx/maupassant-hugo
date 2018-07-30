@@ -32,20 +32,20 @@
         <div id="calendar" class="calendar"></div>
     </section>
     <section class="widget">
-        <h3 class="widget-title">分类</h3>
+        <h3 class="widget-title" ><i class="fa fa-folder-o"></i>&nbsp;分类</h3>
         <ul class="widget-list">
             {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-            <li class="fa fa-angle-double-right">
+            <li class="fa fa-angle-right">
                 <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }} ({{len $taxonomy.Pages}})</a>
             </li><br />
             {{ end }}
         </ul>
     </section>
     <section class="widget">
-        <h3 class="widget-title">归档</h3>
+        <h3 class="widget-title"><i class="fa fa-gavel"></i>&nbsp;归档</h3>
         <ul class="widget-list">
             {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-            <li class="fa fa-angle-double-right">
+            <li class="fa fa-angle-right">
                 <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">{{ $name }} ({{len $taxonomy.Pages}})</a>
             </li><br />
             {{ end }}
@@ -53,10 +53,10 @@
     </section>
     {{ with .Site.Params.links }}
     <section class="widget">
-        <h3 class="widget-title">友情链接</h3>
+        <h3 class="widget-title"><i class="fa fa-external-link"></i>&nbsp;友情链接</h3>
         <ul class="widget-list">
             {{ range . }}
-            <li class="fa fa-angle-double-right">
+            <li class="fa fa-angle-right">
                 <a rel="noreferrer noopener nofollow" href="{{ .url }}" title="{{ .title }}">{{ .name }}</a>
             </li><br />
             {{ end }}
@@ -65,9 +65,9 @@
     {{ end }}
 
     <section class="widget">
-        <h3 class="widget-title">其它</h3>
+        <h3 class="widget-title"><i class="fa fa-file-o"></i>&nbsp;其它</h3>
         <ul class="widget-list">
-            <li class="fa fa-angle-double-right"><a href="{{ "index.xml" | relURL }}">本站RSS</a></li>
+            <li class="fa fa-angle-right"><a href="{{ "index.xml" | relURL }}">&nbsp;本站RSS</a></li>
         </ul><br />
     </section>
 </div>
