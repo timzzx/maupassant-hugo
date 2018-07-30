@@ -8,8 +8,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
-<script type="text/javascript" src="{{ "js/calendar.js" | relURL}}" ></script>
-<script type="text/javascript" src="{{ "js/point.js" | relURL}}" ></script>
+<script type="text/javascript" src="{{ "js/all.js" | relURL}}" ></script>
 {{ if .IsPage }}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/prism.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-go.min.js"></script>
@@ -23,10 +22,3 @@
   $('pre').addClass("line-numbers").css("white-space", "pre-wrap");
 </script>
 {{ end }}
-<script>
-$('.tablelist nav li').addClass("fa fa-chevron-circle-right").css("display","block");
-$('.tablelist nav li').css("line-height","1.5em");
-$("img.lazy").lazyload({
-    effect : "fadeIn"
-});
-</script>
