@@ -50,6 +50,7 @@
                             <br />
                             <br />
                             <hr />
+                            <p class="pull-right"><a href="#" class="fa fa-angle-double-up" ></a></p>
                             
                             {{if (.Next)}}
                             <a href="{{ .Next.Permalink }}">上一页</a>&nbsp;{{ .Next.LinkTitle }}<br /><br />
@@ -57,10 +58,10 @@
                             {{if (.Prev)}}
                             <a href="{{ .Prev.Permalink }}">下一页</a>&nbsp;{{ .Prev.LinkTitle }}
                             {{ end }}
+                            <br />
+                            <br />
+                            <br />
                             
-                            <br />
-                            <br />
-                            <br />
                             </article>
                         </div>
                 {{ if (.Params.gitment) }}
