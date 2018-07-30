@@ -45,12 +45,22 @@
                         <div class="post-content">
                             <article>
                             {{ .Content }}
+                            
+                            <br />
+                            <br />
+                            <br />
+                            <hr />
+                            
                             {{if (.Next)}}
                             <a href="{{ .Next.Permalink }}">上一页</a>&nbsp;{{ .Next.LinkTitle }}<br /><br />
                             {{ end }}
                             {{if (.Prev)}}
                             <a href="{{ .Prev.Permalink }}">下一页</a>&nbsp;{{ .Prev.LinkTitle }}
                             {{ end }}
+                            
+                            <br />
+                            <br />
+                            <br />
                             </article>
                         </div>
                 {{ if (.Params.gitment) }}
