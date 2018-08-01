@@ -1,23 +1,17 @@
 <header id="header" class="clearfix">
     <div class="container">
         <div class="col-group">
-            <img src="{{ "img/favicon.ico" | relURL }}" />
+            <img class="animated  zoomIn slow" src="{{ "img/favicon.ico" | relURL }}" />
             <div class="site-name ">
-                {{ if .IsHome }}
-                    <h1>
-                        <a id="logo" href="{{ .Site.BaseURL | absURL }}">
-                            {{ .Site.Title }}
+                    <h1 class="animated  flipInX slow">
+                        <a id="logo" href="{{ .Site.BaseURL | absURL }}" >
+                            <span >{{ .Site.Title }}</span>
                         </a>
                     </h1>
-                {{ else }}
-                    <a id="logo" href="{{ .Site.BaseURL | absURL }}">
-                        {{ .Site.Title }}
-                    </a>
-                {{ end }}
                 {{ with .Site.Params.description }}<p class="description">{{ . }}</p>{{ end }}
             </div>
             <div>
-                <nav id="nav-menu" class="clearfix">
+                <nav id="nav-menu" class="clearfix animated slower fadeInUp">
                     <a class="{{ if or (.IsHome) (eq .Type "post") }}current{{ end }}" href="{{ .Site.BaseURL | absURL }}"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;博客</a>
                     {{ range $index,$data := (where .Site.Pages "Type" "standalone") }}
                     <a {{ if eq .Permalink $.Permalink }}class="current"{{ end }} href="{{ .Permalink }}" title="{{ .Title }}">
