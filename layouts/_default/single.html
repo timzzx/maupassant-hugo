@@ -11,13 +11,13 @@
                 <div class="res-cons">
                     <article class="post">
                         <header>
-                            <h1 class="post-title"><i class="fa fa-file-o"></i>&nbsp;{{ .Title }}</h1>
+                            <h1 class="post-title"><i class="fa fa-file-text-o"></i>&nbsp;{{ .Title }}</h1>
                         </header>
                         <date class="post-meta meta-date">
                         <i class="fa fa-calendar" aria-hidden="true"></i>
                             {{ .Date.Year }}年{{ printf "%d" .Date.Month }}月{{ .Date.Day }}日
-                            {{ printf "%02d" .Date.Hour }}:{{ printf "%02d" .Date.Minute }} | 
-                            阅读时间{{.ReadingTime}}分钟
+                            {{ printf "%02d" .Date.Hour }}:{{ printf "%02d" .Date.Minute }}
+                            
                         </date>
                         <div class="post-meta">
                             | <i class="fa fa-user-o" aria-hidden="true"></i>
@@ -31,6 +31,10 @@
                             {{ end }}
                         </div>
                         {{ end }}
+                        <br />
+                        <div class="post-meta">
+                            <i class="fa fa-clock-o"></i>&nbsp;阅读时间{{.ReadingTime}}分钟
+                        </div>
                         <br />
                     </article>
                     {{ partial "comments" . }}
@@ -54,10 +58,10 @@
                             <p class="pull-right"><a href="#" class="fa fa-angle-double-up" ></a></p>
                             <p class="pull-left"><a href="#" onclick="javascript:history.go(-1);return false;" class="fa fa-angle-double-left" ></a></p>
                             {{if (.Next)}}
-                            <a href="{{ .Next.Permalink }}">上一页</a>&nbsp;{{ .Next.LinkTitle }}<br /><br />
+                            <a href="{{ .Next.Permalink }}">上一页&nbsp;<i class="fa fa-angle-double-up" ></i></a>&nbsp;{{ .Next.LinkTitle }}<br /><br />
                             {{ end }}
                             {{if (.Prev)}}
-                            <a href="{{ .Prev.Permalink }}">下一页</a>&nbsp;{{ .Prev.LinkTitle }}
+                            <a href="{{ .Prev.Permalink }}">下一页&nbsp;<i class="fa fa-angle-double-down" ></i></a>&nbsp;{{ .Prev.LinkTitle }}
                             {{ end }}
                             <br />
                             <br />
