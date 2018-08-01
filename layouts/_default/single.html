@@ -13,18 +13,18 @@
                         <header>
                             <h1 class="post-title animated slower flipInX"><i class="fa fa-file-text-o"></i>&nbsp;{{ .Title }}</h1>
                         </header>
-                        <date class="post-meta meta-date">
+                        <date class="post-meta meta-date animated slower fadeInUp">
                         <i class="fa fa-calendar" aria-hidden="true"></i>
                             {{ .Date.Year }}年{{ printf "%d" .Date.Month }}月{{ .Date.Day }}日
                             {{ printf "%02d" .Date.Hour }}:{{ printf "%02d" .Date.Minute }}
                             
                         </date>
-                        <div class="post-meta">
+                        <div class="post-meta animated slower fadeInUp">
                             | <i class="fa fa-user-o" aria-hidden="true"></i>
                             <a href="/about">{{ .Site.Author.name }}</a>
                         </div>
                         {{ with .Params.Categories }}
-                        <div class="post-meta">
+                        <div class="post-meta animated slower fadeInUp">
                          | <i class="fa fa-folder-o" aria-hidden="true"></i>
                             {{ range . }}
                                 <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
@@ -32,7 +32,7 @@
                         </div>
                         {{ end }}
                         <br />
-                        <div class="post-meta">
+                        <div class="post-meta animated slower fadeInUp">
                             <i class="fa fa-clock-o"></i>&nbsp;阅读时间{{.ReadingTime}}分钟
                         </div>
                         <br />
