@@ -2,12 +2,8 @@
     <div class="container">
         <div class="col-group">
             <img class="animated  zoomIn slow" src="{{ "img/favicon.ico" | relURL }}" />
+            <img class="animated  zoomIn slow" src="{{ "img/title.png" | relURL }}" />
             <div class="site-name ">
-                    <h1 class="animated  flipInX slow">
-                        <a id="logo" href="{{ .Site.BaseURL | absURL }}" >
-                            <span >{{ .Site.Title }}</span>
-                        </a>
-                    </h1>
                 {{ with .Site.Params.description }}<p class="description">{{ . }}</p>{{ end }}
             </div>
             <div>
