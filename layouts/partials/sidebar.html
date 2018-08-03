@@ -1,8 +1,8 @@
 <div id="secondary" class="">
-    <section class="widget animated slower fadeInUp">
+    <section class="widget animated slow zoomIn">
         {{ partial "search_form" . }}
     </section>
-    <section class="widget animated slower fadeInUp">
+    <section class="widget animated slow zoomIn">
         <div class="card">
             <a href="https://github.com/timzzx">
                 <div class="card-image">
@@ -28,10 +28,10 @@
             </a>
         </div>
     </section>
-    <section class="widget animated slower fadeInUp">
+    <section class="widget animated slow zoomIn">
         <div id="calendar" class="calendar"></div>
     </section>
-    <section class="widget animated slower fadeInUp">
+    <section class="widget animated slow zoomIn">
         <h3 class="widget-title" ><i class="fa fa-folder-o"></i>&nbsp;分类</h3>
         <ul class="widget-list">
             {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
@@ -41,7 +41,7 @@
             {{ end }}
         </ul>
     </section>
-    <section class="widget animated slower fadeInUp">
+    <section class="widget animated slow zoomIn">
         <h3 class="widget-title"><i class="fa fa-calendar-check-o"></i>&nbsp;归档</h3>
         <ul class="widget-list">
             {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
@@ -52,7 +52,7 @@
         </ul>
     </section>
     {{ with .Site.Params.links }}
-    <section class="widget animated slower fadeInUp">
+    <section class="widget animated slow zoomIn">
         <h3 class="widget-title"><i class="fa fa-external-link"></i>&nbsp;友情链接</h3>
         <ul class="widget-list">
             {{ range . }}
@@ -64,7 +64,7 @@
     </section>
     {{ end }}
 
-    <section class="widget animated slower fadeInUp">
+    <section class="widget animated slow zoomIn">
         <h3 class="widget-title"><i class="fa fa-file-o"></i>&nbsp;其它</h3>
         <ul class="widget-list">
             <li class="fa fa-angle-right"><a href="{{ "index.xml" | relURL }}">&nbsp;本站RSS</a></li>
