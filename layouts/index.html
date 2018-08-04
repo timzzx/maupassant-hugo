@@ -13,28 +13,28 @@
                     {{ range $index,$data := (where .Paginator.Pages "Type" "post") }}
                         <article  class="post">
                             <header>
-                                <h2 class="post-title  animated slow flipInX "><i class="fa fa-file-text-o"></i>
+                                <h2 class="post-title   wow animated slow flipInX "><i class="fa fa-file-text-o"></i>
                                     <a href="{{ .Permalink }}">{{ .Title }}</a>
                                 </h2>
                             </header>
-                            <date class="post-meta meta-date animated slow flipInX">
+                            <date class="post-meta meta-date  wow animated slow flipInX">
                                 <i class="fa fa-calendar" aria-hidden="true"></i>
                                 {{ .Date.Year }}年{{ printf "%d" .Date.Month }}月{{ .Date.Day }}日
                                 {{ printf "%02d" .Date.Hour }}:{{ printf "%02d" .Date.Minute }}
                             </date>
-                            <div class="post-meta animated slow flipInX">
+                            <div class="post-meta  wow animated slow flipInX">
                                 | <i class="fa fa-user-o" aria-hidden="true"></i>
                                 <a href="/about">{{ .Site.Author.name }}</a>
                             </div>
                             {{ with .Params.Categories }}
-                            <div class="post-meta animated slow flipInX">
+                            <div class="post-meta  wow animated slow flipInX">
                                 | <i class="fa fa-folder-o" aria-hidden="true"></i>
                                 {{ range . }}
                                     <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
                                 {{ end }}
                             </div>
                             {{ end }}
-                            <div class="post-content animated slower flipInX">
+                            <div class="post-content  wow animated slower flipInX">
                                 <blockquote>
                                 <p>{{ .Summary | truncate 200 }}</p>
                                 </blockquote>
@@ -43,7 +43,7 @@
                             </div>
                         </article>
                         <br />
-                        <hr class ="animated slower fadeInUp" />
+                        <hr class =" wow animated slower fadeInUp" />
                     {{ end }}
                     <p class="pull-right2"><a href="/" class="fa fa-home" ></a></p>
                     <p class="pull-right"><a href="#" class="fa fa-angle-double-up" ></a></p>
