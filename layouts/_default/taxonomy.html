@@ -26,29 +26,29 @@
                     {{ range $index,$data := (where .Paginator.Pages "Type" "post") }}
                         <article class="post">
                             <header>
-                                <h2 class="post-title  wow  slow flipInX">
+                                <h2 class="post-title  wow  slow zoomIn">
                                     <i class="fa fa-file-text-o"></i>
                                     <a href="{{ .Permalink }}">{{ .Title }}</a>
                                 </h2>
                             </header>
-                            <date class="post-meta meta-date  wow  slow flipInX">
+                            <date class="post-meta meta-date  wow  slow zoomIn">
                                 <i class="fa fa-calendar" aria-hidden="true"></i>
                                 {{ .Date.Year }}年{{ printf "%d" .Date.Month }}月{{ .Date.Day }}日
                                 {{ printf "%02d" .Date.Hour }}:{{ printf "%02d" .Date.Minute }}
                             </date>
-                            <div class="post-meta  wow  slow flipInX">
+                            <div class="post-meta  wow  slow zoomIn">
                                 | <i class="fa fa-user-o" aria-hidden="true"></i>
                                 <a href="/about">{{ .Site.Author.name }}</a>
                             </div>
                             {{ with .Params.Categories }}
-                            <div class="post-meta  wow  slow flipInX">
+                            <div class="post-meta  wow  slow zoomIn">
                               | <i class="fa fa-folder-o" aria-hidden="true"></i>
                                 {{ range . }}
                                     <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
                                 {{ end }}
                             </div>
                             {{ end }}
-                            <div class="post-content  wow  slow flipInX">
+                            <div class="post-content  wow  slow zoomIn">
                                 <blockquote>
                                 <p>{{ .Summary | truncate 200 }}</p>
                                 </blockquote>
